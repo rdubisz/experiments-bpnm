@@ -28,8 +28,8 @@ public class BpmnReaderApp {
         InputStream inputStream = app.fileOps();
         String path = app.process(inputStream);
         if(path == null)
-            fail("No path");
-        log.info("Path found: {}", path);
+            fail("No path between " + app.start + " and " + app.end);
+        log.info("The path from {} to {} is: {}", app.start, app.end, path);
 
         log.debug("Exited");
     }

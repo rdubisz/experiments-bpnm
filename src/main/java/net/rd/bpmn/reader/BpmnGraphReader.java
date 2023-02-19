@@ -75,7 +75,7 @@ public class BpmnGraphReader {
         List<Integer> edges = ShortestPathUtils.getPath(graph, sp, start, end);
         if(edges.isEmpty())
             return null;
-        StringJoiner sj = new StringJoiner(" -> ", "[", "]");
+        StringJoiner sj = new StringJoiner(", ", "[", "]");
         for (Integer edge : edges) {
             sj.add(graph.getSource(edge));
         }

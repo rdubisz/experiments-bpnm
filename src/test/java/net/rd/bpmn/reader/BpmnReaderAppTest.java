@@ -17,7 +17,7 @@ public class BpmnReaderAppTest {
         app.end = "invoiceProcessed";
         String path = app.process(stream);
 
-        assertEquals("[approveInvoice -> invoice_approved -> prepareBankTransfer -> ServiceTask_1 -> invoiceProcessed]", path);
+        assertEquals("[approveInvoice, invoice_approved, prepareBankTransfer, ServiceTask_1, invoiceProcessed]", path);
     }
 
     @Test
